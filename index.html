@@ -5,13 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta title="accueil">
-    <script
-        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-        <link rel="stylesheet" href="public/style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,container-queries"></script>
+    <link rel="stylesheet" href="public/style.css">
+    <style>
+        .outer-container {
+            position: relative;
+        }
+
+        #particles-js {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #dd2d2dad;
+            /* could go on .outer-container as well */
+        }
+
+        .outer-container .your-content {
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-200">
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full">
+<body class="bg-red-800">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="/public/images/duck.jpg" class="h-8" alt="Guillemot Logo" />
@@ -52,17 +70,25 @@
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <section id="hero" class="bg-cover bg-center h-screen flex items-center justify-center text-center text-white">
-        <div class="bg-black bg-opacity-50 p-10 rounded">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenue sur mon portfolio</h1>
-            <a href="apropos.html"
-                class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg font-medium">à propos de moi</a>
+    <div class="outer-container">
+        <div id="particles-js"></div>
+        <section id="hero" class="bg-cover bg-center h-screen flex items-center justify-center text-center text-white your-content">
+            <div class="bg-black bg-opacity-50 p-10 rounded">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenue sur mon portfolio</h1>
+                <a href="apropos.html"
+                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg font-medium">à propos de
+                    moi</a>
                 <a href="portfolio.html"
-                class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg font-medium">Voir mes
-                projets</a>
-        </div>
-    </section>
+                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg font-medium">Voir mes
+                    projets</a>
+            </div>
+        </section>
+    </div>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Hero Section -->
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white text-center py-4">
