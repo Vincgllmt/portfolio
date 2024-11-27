@@ -10,8 +10,9 @@
         <link rel="stylesheet" href="public/style.css">
 </head>
 
-<body>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full">
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover">
+    <script type="module" src="js/api.js"></script>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="/public/images/duck.jpg" class="h-8" alt="Guillemot Logo" />
@@ -52,6 +53,11 @@
             </div>
         </div>
     </nav>
+    <div class="container mx-auto">
+        <div id="card-container" class="flex flex-col justify-center items-center mx-3 gap-5">
+        </div>
+    </div>
+    
 </body>
 
 </html>
